@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexovate</title>
+    <link rel="stylesheet" href="layOut04.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="Wraped">
+        <header>
+            <div class="Logo_">
+                <img src="nexovate (4).jpg" alt="Nexovate logo" width="200">
+                <p>My group company: Nexovate</p>
+            </div>
+            <nav>
+                <span>Home</span> |
+                <span>Skills</span> |
+                <span>Contacts</span>
+            </nav>
+        </header>
+
+        <h1>Nexovate</h1>
+
+        <div id="container">
+            <div id="main-column">
+                <h2>Come and work with us</h2>
+                <p>Shishir Ahmed Joy</p>
+                <img src="nexovate (2).png" alt="Nexovate banner" width="450">
+            </div>
+
+            <div id="side-column">
+                <div id ="askSection"> 
+                <h2>Ask info</h2>
+                <form>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email">
+                    <br><br>
+                    <label for="question">Question:</label><br>
+                    <textarea id="question" name="question"></textarea>
+                    <br><br>
+                    <button type="submit" id="askButton">ASK</button>
+                </form>
+<a href="#" id="moreInfoLink">More Info</a>            </div>
+
+            <div id="moreinformation" style="display: none;">
+                <h2>More Information</h2>
+                    <p>
+                        Team emails: <br>
+                        shishir@nexovate.com <br>
+                        yerex@nexovate.com
+                    </p>
+                <a href="#" id="askLink">Ask to meet us</a>    </div>
+        </div>
+        </div>
+    
+
+        <footer>
+            <p>© Nexovate 2025</p>
+            <p><em>Made by: Shishir Ahmed Joy</em></p>
+        </footer>
+    </div>
+
+    <script>
+
+        // JavaScript 
+        document.addEventListener("DOMContentLoaded", function() {
+            const moreInfoLink = document.getElementById("moreInfoLink");
+            const askLink = document.getElementById("askLink");
+            const askSection = document.getElementById("askSection");
+            const moreInformation = document.getElementById("moreinformation");
+
+            moreInfoLink.addEventListener("click", function(event) {
+                event.preventDefault();
+                askSection.style.display = "none";
+                moreInformation.style.display = "block";
+            });
+
+            askLink.addEventListener("click", function(event) {
+                event.preventDefault();
+                moreInformation.style.display = "none";
+                askSection.style.display = "block";
+            });
+        });
+
+        // jQuery version
+        
+        /*
+        $(document).ready(function () {
+        $("#moreInfoLink").click(function (event) {
+            event.preventDefault(); 
+            $("#askSection").hide();
+            $("#moreinformation").show();
+    });
+
+        $("#askLink").click(function (event) {
+            event.preventDefault(); 
+            $("#moreinformation").hide();
+            $("#askSection").show();
+    });
+    
+});
+*/
+
+    </script>
+</body>
+</html>
